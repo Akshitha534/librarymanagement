@@ -1,11 +1,11 @@
-import {lint} from "react-router-dom";
+import { Link } from "react-router-dom";
 function Home({books}){
     const totalBooks = books.length;
-    const totlaCopies = reduce((sum,book)=>{
+    const totalCopies = books.reduce((sum,book)=>{
         return sum+ book.totalCopies;
     },0);
     const availableCopies=books.reduce((sum,book)=>{
-        return sum+ books.availableCoipes;
+        return sum+ book.availableCoipes;
     },0);
 
     return(
@@ -15,7 +15,7 @@ function Home({books}){
                     <h1>Dashboard</h1>
 
                 </div>
-                <link to = "/dashboard/books/add" className="primary-link">Add New Book</link>
+                <Link to = "/dashboard/books/add" className="primary-link">Add New Book</Link>
             </div>
 
             <div className="Static-card">

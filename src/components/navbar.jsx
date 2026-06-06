@@ -1,7 +1,7 @@
-import {NavLink} from "react-route-dom";
+import { NavLink } from "react-router-dom";
 
 
-function Navbar({onLogout}) {
+function Navbar({ onLogout }) {
     return (
         <header className="navbar">
             <div>
@@ -10,8 +10,8 @@ function Navbar({onLogout}) {
             </div>
             <nav>
                 <NavLink to = "/dashboard">Home</NavLink>
-                <NavLink to = "/books">Books</NavLink>
-                <NavLink to = "/add-book">Add Book</NavLink>
+                <NavLink to = "/dashboard/books">Books</NavLink>
+                <NavLink to = "/dashboard/add-book">Add Book</NavLink>
                 <button onClick={onLogout} className="logout-btn">Logout</button>
 
             </nav>

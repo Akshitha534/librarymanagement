@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
-import { initialBooks } from "./data/initialBooks";
+import { initialBooks } from "./data/books";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 
 import {

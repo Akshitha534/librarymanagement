@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import EmptyState from "../Components/Emptystate";
 
-function BookList({ books, onDelete }) {
+function BookList({ books, onDeleteBook }) {
     const [searchText, setSearchText] = useState('');
 
     const filteredBooks = books.filter(book => {
@@ -17,7 +17,7 @@ function BookList({ books, onDelete }) {
     function handleDelete(bookid) {
         const confirmDelete = window.confirm("Are you sure you want to delete this book?");
         if (confirmDelete) {
-            onDelete(bookid);
+            onDeleteBook(bookid);
         }
     }
 

@@ -2,6 +2,7 @@
   "name": "librarymanagement",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://akshitha534.github.io/librarymanagement/",
   "type": "module",
   "scripts": {
     "dev": "vite",

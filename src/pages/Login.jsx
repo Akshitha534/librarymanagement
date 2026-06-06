@@ -7,7 +7,7 @@ function Login({isLoggedIn,onLogin}) {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const redirecctPath = location.state?.from?.pathname || "/dashboard";
+    const redirectPath = location.state?.from?.pathname || "/dashboard";
 
     const [formData, setFormData] = useState({
         username: '',
@@ -85,7 +85,7 @@ return(
             placeholder="Enter password" />
             {error.password && <span className="error">{error.password}</span>}
         </div>
-        <button type="submit" className="primary-btn" full-width>Login</button>
+        <button type="submit" className="primary-btn" >Login</button>
       
     </form>
 

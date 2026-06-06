@@ -1,14 +1,19 @@
-import { Navigate,Outlet,useLoation } from "react-router-dom";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 
-function ProtectedRoute({isLoggedIn}) 
-{
-    const location = useLocation();
-        if(isLoggedIn){
-         return <Navigate to ="/login" replaces state={{from: location}}/>
-        
-        }
-        return <Outlet/>;
-    }
+function ProtectedRoute({ isLoggedIn }) {
+  const location = useLocation();
 
-    export default ProtectedRoute;
-    
+  if (!isLoggedIn) {
+    return (
+      <Navigate
+        to="/login"
+        replace
+        state={{ from: location }}
+      />
+    );
+  }
+
+  return <Outlet />;
+}
+
+export default ProtectedRoute;
