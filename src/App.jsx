@@ -15,7 +15,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 import Login from "./pages/Login";
 import DashboardLayout from "./pages/DashboardLayout";
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import BooksList from "./pages/BooksList";
 import AddBook from "./pages/AddBook";
 import EditBook from "./pages/EditBook";
